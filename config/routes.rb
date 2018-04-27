@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'graph/index'
-  get 'graph/data', :defaults => { :format => 'json' }
+  root 'graph#index'
+#  get 'graph/data', to: 'graph#data', defaults: { format: 'json' }
+  get  'data' => 'graph#data', defaults: { format: 'json' }
 end
